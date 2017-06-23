@@ -1,0 +1,246 @@
+.ctools-locked {
+    color: red;
+    border: 1px solid red;
+    padding: 1em;
+}
+
+.ctools-owns-lock {
+    background: #FFFFDD none repeat scroll 0 0;
+    border: 1px solid #F0C020;
+    padding: 1em;
+}
+
+a.ctools-ajaxing, input.ctools-ajaxing, button.ctools-ajaxing, select.ctools-ajaxing {
+    padding-right: 18px !important;
+    background: url(../../../all/modules/ctools/images/status-active.gif) right center no-repeat;
+}
+
+div.ctools-ajaxing {
+    float: left;
+    width: 18px;
+    background: url(../../../all/modules/ctools/images/status-active.gif) center center no-repeat;
+}
+
+.gam-banner {
+    line-height: 0;
+    position: absolute;
+}
+
+.gam-holder {
+    margin: 0 auto;
+}
+
+.block-google_admanager {
+    line-height: 0;
+}
+
+div.panel-pane div.admin-links {
+    font-size: xx-small;
+    margin-right: 1em;
+}
+
+div.panel-pane div.admin-links li a {
+    color: #ccc;
+}
+
+div.panel-pane div.admin-links li {
+    padding-bottom: 2px;
+    background: white;
+    z-index: 201;
+}
+
+div.panel-pane div.admin-links:hover a, div.panel-pane div.admin-links-hover a {
+    color: #000;
+}
+
+div.panel-pane div.admin-links a:before {
+    content: "[";
+}
+
+div.panel-pane div.admin-links a:after {
+    content: "]";
+}
+
+div.panel-pane div.panel-hide {
+    display: none;
+}
+
+div.panel-pane div.panel-hide-hover, div.panel-pane:hover div.panel-hide {
+    display: block;
+    position: absolute;
+    z-index: 200;
+    margin-top: -1.5em;
+}
+
+div.panel-pane div.feed a {
+    float: right;
+}
+
+.wrapper.tagclouds {
+    text-align: justify;
+    margin-right: 1em;
+}
+
+.tagclouds.level1 {
+    font-size: 1em;
+}
+
+.tagclouds.level2 {
+    font-size: 1.2em;
+}
+
+.tagclouds.level3 {
+    font-size: 1.4em;
+}
+
+.tagclouds.level4 {
+    font-size: 1.6em;
+}
+
+.tagclouds.level5 {
+    font-size: 1.8em;
+}
+
+.tagclouds.level6 {
+    font-size: 2em;
+}
+
+.tagclouds.level7 {
+    font-size: 2.2em;
+}
+
+.tagclouds.level8 {
+    font-size: 2.4em;
+}
+
+.tagclouds.level9 {
+    font-size: 2.6em;
+}
+
+.tagclouds.level10 {
+    font-size: 2.8em;
+}
+
+.panel-3col-33-stacked {
+}
+
+.panel-3col-33-stacked .panel-col-top, .panel-3col-33-stacked .panel-col-bottom {
+    width: 100%;
+    clear: both;
+}
+
+.panel-3col-33-stacked .panel-col-top .inside {
+    margin-bottom: 1em;
+}
+
+.panel-3col-33-stacked .panel-col-first {
+    float: left;
+    width: 33%;
+}
+
+.panel-3col-33-stacked .panel-col-first .inside {
+    margin: 0 .5em 1em 0;
+}
+
+.panel-3col-33-stacked .panel-col {
+    float: left;
+    width: 33%;
+}
+
+.panel-3col-33-stacked .panel-col .inside {
+    margin: 0 .5em 1em .5em;
+}
+
+.panel-3col-33-stacked .panel-col-last {
+    float: left;
+    width: 33%;
+}
+
+.panel-3col-33-stacked .panel-col-last .inside {
+    margin: 0 0 1em .5em;
+}
+
+.panel-3col-33-stacked .panel-separator {
+    margin: 0 0 1em 0;
+}
+
+.quicktabs-hide {
+    display: none;
+}
+
+ul.quicktabs-tabs {
+    margin-top: 0;
+}
+
+ul.quicktabs-tabs li {
+    display: inline;
+    background: none;
+    list-style-type: none;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+ul.quicktabs-tabs li a:focus {
+    outline: none;
+}
+
+.quicktabs_main.quicktabs-style-ama-qt {
+    clear: both;
+}
+
+ul.quicktabs-tabs.quicktabs-style-ama-qt {
+    margin: 0 0 10px 0;
+    font-size: 11px;
+    list-style: none;
+    padding: 3px 0 23px 0;
+}
+
+ul.quicktabs-tabs.quicktabs-style-ama-qt li {
+    float: left;
+    height: 35px;
+    margin: 0 0;
+    padding: 0 0 0 15px;
+    border: 1px solid #f1f1f1;
+}
+
+ul.quicktabs-tabs.quicktabs-style-ama-qt li a {
+    font-size: 170%;
+    margin: 0;
+    display: block;
+    padding: 0 15px 0 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: # #37448f;
+    background: transparent url(../../../all/modules/quicktabs/quicktabs_tabstyles/tabstyles/ama_qt/images/ama-qt.html) no-repeat right -25px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-ama-qt li:hover a {
+    background-position: right -75px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-ama-qt li:hover {
+    background-position: 0 -50px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-ama-qt li.active a, ul.quicktabs-tabs.quicktabs-style-ama-qt li.active a:hover {
+    background-position: right -125px;
+}
+
+ul.quicktabs-tabs.quicktabs-style-ama-qt li.active {
+    background-position: 0 -100px;
+    background-color: #f1f1f1;
+}
+
+.quicktabs-row {
+    background-color: #f1f1f1;
+    padding: 15px 5px 5px 15px;
+}
+
+* html ul.quicktabs-tabs.quicktabs-style-ama-qt li a {
+    color: #fff !important;
+    background: transparent url(../../../all/modules/quicktabs/quicktabs_tabstyles/tabstyles/ama_qt/images/ama-qt-2.html) no-repeat right -25px;
+}
+
+* html ul.quicktabs-tabs.quicktabs-style-ama-qt li {
+    background: transparent url(../../../all/modules/quicktabs/quicktabs_tabstyles/tabstyles/ama_qt/images/ama-qt-2.html) no-repeat 0 0px;
+}

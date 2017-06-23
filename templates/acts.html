@@ -1,0 +1,98 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+        <section class="main-body">
+            <div class="row">
+                <div class="large-12 columns ">
+
+                    <a id="main-content"></a>
+
+
+                    <div class="view view-read-more-views view-id-read_more_views view-display-id-page_8 view-dom-id-1ab4711afe7cd1ba3a7d8d240333dfda">
+
+
+                        <div class="row">
+                            <div class="large-9 medium-8 columns">
+                            <div class="view-header" style="margin-top: 25px;">
+                            <h1 class="section-title">НПА</h1></div>
+                                <div class="view-content">
+                                    <div class="item-list panel link-list">
+                                        <ul>
+                                            {% for i in npa %}
+                                            <li class="views-row views-row-1 views-row-odd views-row-first">
+                                                <div class="views-field views-field-title"><span
+                                                        class="field-content"><a
+                                                        href="/act/{{ i.id }}/"><p>{{ i.name }}-#{{ i.number }}</p></a></span>
+                                                </div>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        <div class="large-3 medium-4 columns">
+                        <section class="sidebar hide-for-small">
+                            <div class="panel-pane pane-block pane-menu-block-1 sidebar-panel">
+
+                                <h2 class="section-title text-center">
+                                    <a href="/" class="active-trail">Категории</a></h2>
+
+
+                                <div class="pane-content">
+                                    <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-2 landing-menu">
+                                        <ul class="menu side-nav">
+                                            <li class="first leaf active-trail active menu-mlid-959"><a href="/"
+                                                                                                        class="active-trail active">Главная</a>
+                                            </li>
+                                            <li class="leaf menu-mlid-960"><a href="/news/">Новости</a></li>
+                                            <li class="leaf menu-mlid-961"><a href="/acts/">НПА</a></li>
+                                            <li class="leaf menu-mlid-1054"><a href="/attestation/">Аттестация</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="panel-separator"></div>
+
+                            <div class="panel-separator"></div>
+
+                        </section>
+                    </div>
+ <div class="large-3 medium-4 columns">
+                        <section class="sidebar hide-for-small">
+                            <div class="panel-pane pane-block pane-menu-block-1 sidebar-panel">
+
+                                <h2 class="section-title text-center">
+                                    <a class="active-trail">Руководства</a></h2>
+
+
+                                <div class="pane-content">
+                                    <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-2 landing-menu">
+                                        <ul class="menu side-nav">
+                                            {% for i in protocol %}
+                                            <li class="leaf menu-mlid-960"><a href="/protocol/{{ i.id }}/">{{ i.name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="panel-separator"></div>
+
+                            <div class="panel-separator"></div>
+
+                        </section>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.main region -->
+
+
+            </div>
+        </section>
+{% endblock %}

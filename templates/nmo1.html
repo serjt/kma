@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+
+    <section class="main-body">
+
+        <div class="row">
+
+            <div class="large-9 medium-8 columns">
+            <div class="view-header" style="margin-top: 25px;">
+                            <h1 class="section-title">{{ article.name }}</h1></div>
+                <section class="ama-article">
+                    <div class="addthis_sharing_toolbox text-right"></div>
+                    <hr>
+                    <div class="field field-name-body field-type-text-with-summary field-label-hidden field-wrapper body field">
+                        {{ article.text|safe }}
+                    </div>
+                    <hr>
+                    <p>Опубликовано: <em>{{ article.date }}</em>
+                        {% if article.file %}
+                        <a class="tiny button radius" href="{{ article.file.url }}">Скачать</a>
+                        {% endif %}                    </p>
+                </section>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

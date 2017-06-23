@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="main-body">
+            <div class="row">
+                <div class="large-12 columns ">
+
+                    <a id="main-content"></a>
+
+
+                    <article id="node-46649" class="node node-ausmed-article view-mode-full"
+                             about="/ausmed/ama-president%E2%80%99s-award-presented-long-serving-and-dedicated-gp"
+                             typeof="sioc:Item foaf:Document">
+
+                        <section class="carousel">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <div class="span12">
+                                            <div class="owl-carousel" id="owl-demo">
+                                                <div class="item">
+                                                    <img alt="Mirror Edge"
+                                                         src="{% static article.image.url %}">
+                                                    <div class="hero__text center-text wrapper">
+                                                        <h1>{{ article.title }}</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <section class="main-body">
+                            <div class="row">
+                                <div class="large-9 medium-8 columns">
+                                    <section class="ama-article">
+                                        <div class="addthis_sharing_toolbox text-right"></div>
+                                        <hr>
+                                        <div class="field field-name-body field-type-text-with-summary field-label-hidden field-wrapper body field">
+                                        {{ article.text|safe }}
+                                        </div>
+                                        <hr>
+                                        <p>Опубликовано: <em>{{ article.date }}</em>
+
+                                </p>
+                        </section>
+
+                </div>
+            </div>
+        </section>
+                        </article>
+                    </div>
+                </div>
+</section>
+{% endblock %}

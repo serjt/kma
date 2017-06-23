@@ -1,0 +1,243 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+    <section class="main-body">
+        <div class="row">
+            <div class="large-12 columns ">
+
+                <a id="main-content"></a>
+
+
+                <div class="panel-display panel-ama-3col clearfix">
+                    <section class="carousel">
+                        <div class="container">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <div class="span12">
+                                        <div class="panel-pane pane-block pane-views-homepage-carousel-block owl-carousel"
+                                             id="owl-demo">
+                                            {% for i in slider %}
+                                                <div>
+
+                                                    <div class="item">
+                                                        <img typeof="foaf:Image"
+                                                             src="{% static i.image.url %}"
+                                                             width="970" height="550"/>
+                                                        <div class="hero__text center-text wrapper">
+                                                            <p>{{ i.title }}</p>
+                                                            <p class="hero__button"><a class="button radius"
+                                                                                       href="/article/{{ i.id }}/">Узнать
+                                                                еще</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="row">
+                        <div class="large-9 medium-8 columns">
+                            <div class="panel-pane pane-custom pane-2">
+
+
+                                <div class="pane-content">
+                                    <div class="row">
+                                        <h2 class="text-center">
+                                            Последние новости
+                                        </h2>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <section class="ama-homepage-panel">
+                                <div class="row" data-equalizer>
+                                    {% for i in news %}
+                                        <div class="large-6 medium-6 columns">
+                                            <div class="panel-pane pane-views pane-home-latest-from-ama">
+
+
+                                                <div class="pane-content">
+                                                    <div class="view view-home-latest-from-ama view-id-home_latest_from_ama view-display-id-block_1 row view-dom-id-2dcdcee0453e49c7da327511cdb74ea5">
+
+
+                                                        <div class="view-content">
+                                                            <div>
+
+                                                                <div>        <span>
+
+                                                                    <div
+                                                                            class="large-12 medium-12 columns">
+                                                                        <div class="panel-image-wrap">
+                                                                            <img typeof="foaf:Image"
+                                                                                 src="{% static i.image.url %}"
+                                                                                 width="420" height="200"/>
+                                                                        </div>
+                                                                        <h3>
+                                                                            <a href="/article/{{ i.id }}/">{{ i.title }}</a>
+                                                                        </h3>
+                                                                        <div class="text-center"><a
+                                                                                class="tiny button radius"
+                                                                                href="/article/{{ i.id }}/">Узнать
+                                                                            еще</a></div>
+                                                                    </div></span></div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="row" data-equalizer>
+                                    <div class="large-6 medium-6 columns">
+                                        <div class="panel-pane pane-block pane-views-home-demographic-boxes-block-1
+                                        panel your-practice">
+
+
+                                            <div class="pane-content">
+                                                <div class="view view-home-demographic-boxes view-id-home_demographic_boxes view-display-id-block_1 view-dom-id-a2c3e6abea708b4bf7692b5fc31a2339">
+                                                    <i class="icon-terms"></i>
+                                                    <h2>Аттестация</h2>
+                                                    <ul class="ama-links text-left" data-equalizer-watch>
+
+                                                        {% for i in atestation %}
+                                                        <li>
+                                                            <a href="/attestation/{{ i.id }}/">{{ i.name }}</a></li>
+{% endfor %}
+                                                    </ul>
+
+
+                                                    <a class="secondary tiny button radius"
+                                                       href="/attestation/">Показать все</a></div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="large-6 medium-6 columns">
+                                        <div class="panel-pane pane-block pane-views-home-demographic-boxes-block-2 panel students">
+
+
+                                            <div class="pane-content">
+                                                <div class="view view-home-demographic-boxes view-id-home_demographic_boxes view-display-id-block_2 view-dom-id-0c7b15ab4ea6b69e4df81053b739f971">
+                                                    <i class="icon-students"></i>
+                                                    <h2>Правовые акты</h2>
+                                                    <ul class="ama-links text-left" data-equalizer-watch>
+
+                                                    {% for i in NPA %}
+                                                        <li><a href="/act/{{ i.id }}/">{{ i.name }}</a></li>
+                                                        {% endfor %}
+                                                    </ul>
+
+
+                                                    <a class="secondary tiny button radius" href="/acts/">Показать все</a></div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <!-- Right sidebar-->
+                        <div class="large-3 medium-4 columns">
+                            <section class="sidebar hide-for-small">
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-custom pane-3">
+
+
+                                    <div class="pane-content">
+                                        <div class="row link-list">
+                                            <div class="large-12 columns">
+                                                <div class="join-now">
+                                                    <h3 class="text-center">Присоединяйся</h3>
+                                                    </li>
+                                                    <li>стажировки в зарубежных клиниках.</li>
+                                                    <li>научные обмены в зарубежных лабараториях.</li>
+                                                    <li>социальные проекты.</li>
+                                                    </ul>
+                                                    <center><a class="button radius tiny" href="join-renew.html">Join
+                                                        us!</a></center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br/></div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-pane pane-block pane-quicktabs-latest-and-popular">
+
+
+                                    <div class="pane-content">
+                                        <div id="quicktabs-latest_and_popular"
+                                             class="quicktabs-wrapper quicktabs-style-ama-qt">
+                                            <div class="item-list">
+                                                <ul class="quicktabs-tabs quicktabs-style-ama-qt">
+                                                    <li class="active first"><a
+                                                            href="/news/"
+                                                            id="quicktabs-tab-latest_and_popular-0" class="active">Новости</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div id="quicktabs-container-latest_and_popular"
+                                                 class="quicktabs_main quicktabs-style-ama-qt">
+                                                <div id="quicktabs-tabpage-latest_and_popular-0"
+                                                     class="quicktabs-tabpage ">
+                                                    <section
+                                                            class="block block-views block-views-latest-and-popular-block">
+
+
+                                                        <div class="view view-latest-and-popular view-id-latest_and_popular view-display-id-block view-dom-id-6f4f538379ec41738cb9e2306aec8b66">
+
+
+                                                            <div class="view-content">
+                                                                <div class="quicktabs-row">
+                                                                    {% for i in kabar %}
+                                                                        <div class="views-field views-field-nothing">
+                                                                            <span class="field-content">
+                                                                                <em>{{ i.date }}</em><br>
+                                                                        <a href="/article/{{ i.id }}/">{{ i.title }}</a>
+                                                                        </div>
+                                                                    {% endfor %}
+                                                                </div>
+
+
+                                                            </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="panel-separator"></div>
+                                <div class="panel-separator"></div>
+                            </section>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--/.main region -->
+
+
+        </div>
+    </section>
+{% endblock %}

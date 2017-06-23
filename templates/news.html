@@ -1,0 +1,221 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+
+    <section class="main-body">
+        <div class="row">
+            <div class="large-12 columns ">
+
+                <a id="main-content"></a>
+                <section class="carousel">
+                    <div class="container">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <div class="span12">
+                                    <div class="panel-pane pane-block pane-views-homepage-carousel-block owl-carousel"
+                                         id="owl-demo">
+                                        {% for i in slider %}
+                                            <div>
+
+                                                <div class="item">
+                                                    <img typeof="foaf:Image"
+                                                         src="{% static i.image.url %}"
+                                                         width="970" height="550"/>
+                                                    <div class="hero__text center-text wrapper">
+                                                        <p>{{ i.title }}</p>
+                                                        <p class="hero__button"><a class="button radius"
+                                                                                   href="/article/{{ i.id }}/">Узнать
+                                                            еще</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="row">
+                    <div class="large-9 medium-8 columns">
+                        <section class="landing-page-panel">
+                            <div class="row">
+                                <div class="large-12 medium-12 columns">
+                                    <div class="panel-pane pane-block pane-google-admanager-ac7c795f67552a7d507868fec4bd6527 text-center">
+                                    </div>
+                                    <div class="panel-separator"></div>
+                                    <div class="panel-pane pane-custom pane-1">
+
+
+                                        <div class="pane-content">
+                                            <h2 class="section-title">Новости</h2></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" data-equalizer>
+                                <div class="large-6 medium-6 columns">
+                                    <div class="panel-pane pane-views-panes pane-ausmed-by-feature-blocks-panel-pane-1 panel">
+
+
+                                        <div class="pane-content">
+                                            <div class="view view-ausmed-by-feature-blocks view-id-ausmed_by_feature_blocks view-display-id-panel_pane_1 view-dom-id-3278a41b93af3e36afa5c2109757edb3">
+
+
+                                                <div class="attachment attachment-before">
+                                                    <div class="view view-ausmed-by-feature-blocks view-id-ausmed_by_feature_blocks view-display-id-attachment_1">
+
+
+                                                        <div class="view-content">
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="view-content">
+                                                    <div>
+                                                        {% for i in first %}
+                                                            <div class="views-field views-field-nothing">        <span
+                                                                    class="field-content">
+<div class="panel-image-wrap"><img typeof="foaf:Image"
+                                   src="{% static i.image.url %}"
+                                   width="420" height="200"/></div>
+<ul>
+    <li><a href="/article/{{ i.id }}/" style="font-style: italic">
+        <p>{{ i.title }}</p></a>
+          <a>
+        <p style="font-size: 13px">Дата создания - {{ i.date }}</p></a>
+    </li>
+</ul></span></div>
+                                                        {% endfor %}
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="large-6 medium-6 columns">
+                                    <div class="panel-pane pane-views-panes pane-ausmed-by-feature-blocks-panel-pane-1 panel">
+
+
+                                        <div class="pane-content">
+                                            <div class="view view-ausmed-by-feature-blocks view-id-ausmed_by_feature_blocks view-display-id-panel_pane_1 view-dom-id-ed859038994c65f4955bbfbc1d3447d7">
+
+
+                                                <div class="attachment attachment-before">
+                                                    <div class="view view-ausmed-by-feature-blocks view-id-ausmed_by_feature_blocks view-display-id-attachment_1">
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="view-content">
+                                                    <div>
+                                                        {% for i in second %}
+                                                            <div class="views-field views-field-nothing">        <span
+                                                                    class="field-content">
+<ul>
+    <li><a href="/article/{{ i.id }}/" style="font-style: italic">
+        <p>{{ i.title }}</p></a>
+          <a>
+        <p style="font-size: 13px">Дата создания - {{ i.date }}</p></a>
+    </li>
+
+</ul></span></div>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </section>
+                    </div>
+
+                    <!-- Right sidebar-->
+                    <div class="large-3 medium-4 columns">
+                        <section class="sidebar hide-for-small">
+                            <div class="panel-pane pane-block pane-menu-block-1 sidebar-panel">
+
+                                <h2 class="section-title text-center">
+                                    Категории</h2>
+
+
+                                <div class="pane-content">
+                                    <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-2 landing-menu">
+                                        <ul class="menu side-nav">
+                                            <li class="first leaf active-trail active menu-mlid-959"><a href="/"
+                                                                                                        class="active-trail active">Главная</a>
+                                            </li>
+                                            <li class="leaf menu-mlid-960"><a href="/news/">Новости</a></li>
+                                            <li class="leaf menu-mlid-961"><a href="/acts/">НПА</a></li>
+                                            <li class="leaf menu-mlid-1054"><a href="/attestation/">Аттестация</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="panel-separator"></div>
+
+                            <div class="panel-separator"></div>
+
+                        </section>
+                    </div>
+                 <div class="large-3 medium-4 columns">
+                        <section class="sidebar hide-for-small">
+                            <div class="panel-pane pane-block pane-menu-block-1 sidebar-panel">
+
+                                <h2 class="section-title text-center">
+                                    <a class="active-trail">Руководства</a></h2>
+
+
+                                <div class="pane-content">
+                                    <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-2 landing-menu">
+                                        <ul class="menu side-nav">
+                                            {% for i in protocol %}
+                                            <li class="leaf menu-mlid-960"><a href="/protocol/{{ i.id }}/">{{ i.name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="panel-separator"></div>
+
+                            <div class="panel-separator"></div>
+
+                        </section>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <!--/.main region -->
+
+
+        </div>
+    </section>
+    <!--/.main-->
+
+{% endblock %}
